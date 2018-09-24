@@ -1,0 +1,147 @@
+/*google font*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+.container{ 
+  font-family:'Montserrat';
+  margin:30px auto 0; 
+  display:block; 
+  background:#fff;
+	padding:10px 10px 50px;
+	color: #757575;
+}
+
+.inp {
+	position: relative;
+	margin: auto;
+	width: 100%;
+  max-width: 280px;
+  margin-top: 15px;
+}
+
+.inp .label {
+	position: absolute;
+	top: 16px;
+	left: 0;
+	font-size: 14px;
+	color: #757575;
+	transform-origin: 0 0;
+	transition: all 0.2s ease;
+	font-weight: 400;
+}
+
+.inp .border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: #07f;
+	transform: scaleX(0);
+	transform-origin: 0 0;
+	transition: all 0.15s ease;
+}
+
+.inp input {
+	-webkit-appearance: none;
+	width: 100%;
+	border: 0;
+	font-family: inherit;
+	padding: 12px 0;
+	height: 48px;
+	font-size: 16px;
+	font-weight: 500;
+	border-bottom: 2px solid #757575;
+	background: none;
+	border-radius: 0;
+	color:#757575;
+	transition: all 0.15s ease;
+}
+
+.inp input:hover {
+	background: rgba(34,50,84,0.03);
+}
+
+.inp input:not(:placeholder-shown) + span {
+	color: #5a667f;
+	transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus {
+	background: none;
+	outline: none;
+}
+
+.inp input:focus + span {
+	color: #07f;
+	transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus + span + .border {
+	transform: scaleX(1);
+}
+
+#mySelect{
+  position: relative;
+	margin: 0;
+	width: 100%;
+  max-width: 280px;
+  margin-top: 30px;
+}
+
+.top-buffer {
+  margin-top: 20px;
+ 
+}
+.control-label{
+	height: 35px;
+	line-height: 35px;
+}
+.controls input{
+	padding: 2px 2px;
+	width: 34px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+.form-group label{
+	margin-bottom: 0px;
+	font-weight: 400;
+}
+
+/* For Firefox */
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.bedroom .form-group{
+	height: 30px;
+}
+.lounge .form-group{
+	height: 30px;
+}
+.office .form-group{
+	height: 30px;
+}
+.kitchen .form-group{
+	height: 30px;
+}
+ .family .form-group{
+	height: 30px;
+}
+ .laundry .form-group{
+	height: 30px;
+}
+ .garage .form-group{
+	height: 30px;
+}
+.outdoor .form-group{
+	height: 30px;
+}
+.other-items .form-group{
+	height: 30px;
+}

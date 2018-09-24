@@ -1,0 +1,51 @@
+
+
+$(document).ready(function () {
+  // $("#contact").click(function(){
+  //    alert("hello");
+  // });
+
+  
+  function maxLengthCheck(object) {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+  }
+
+    $("#packers-details").submit(function (event) {
+     
+      event.preventDefault();
+
+      var data = $('form').serializeArray();
+  
+      var packersDetails = {};
+     
+      $.each(data, function () {
+          if (packersDetails[this.name]) {
+              if (!packersDetails[this.name].push) {
+                packersDetails[this.name] = [packersDetails[this.name]];
+              }
+              packersDetails[this.name].push(this.value || '');
+          } else {
+            packersDetails[this.name] = this.value || '';
+          }
+      });
+
+      console.log(packersDetails)
+
+
+      $.ajax({
+        type: "POST",
+        dataType: "application/json",
+        contentType: "application/json",
+        url: "https://manage-my.appspot.com/contact",
+        data: JSON.stringify(packersDetails),
+        success: function (response) {
+          $("#myModal").modal('show');
+          console.log(response)
+        },
+        error: function(response){
+          $("#myModal").modal('show');
+        }
+      });
+    });
+  });
